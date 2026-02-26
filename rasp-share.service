@@ -1,0 +1,20 @@
+[Unit]
+Description=R2D2 Internet Sharing Watchdog
+
+After=network.target
+
+[Service]
+
+ExecStart=/home/pi/EthernetBridge_m1sato/keep_shared.sh
+
+Restart=always
+
+RestartSec=10
+
+User=root
+
+WorkingDirectory=/home/pi/EthernetBridge_m1sato
+
+[Install]
+
+WantedBy=multi-user.target
